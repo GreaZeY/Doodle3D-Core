@@ -1,0 +1,16 @@
+dist
+
+lib
+
+module
+
+node_modules
+
+www
+
+plugins
+
+platforms
+
+config.xml
+.DS_Store
