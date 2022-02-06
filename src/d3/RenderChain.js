@@ -2,15 +2,16 @@ import * as THREE from 'three';
 import OutlinePass from './effects/OutlinePass.js';
 import RenderPass from './effects/RenderPass.js';
 import AnaglyphPass from './effects/AnaglyphPass.js';
-import 'three/examples/js/shaders/CopyShader.js';
-import 'three/examples/js/postprocessing/EffectComposer.js';
-import 'three/examples/js/postprocessing/ShaderPass.js';
+
+// import  'three/examples/jsm/shaders/CopyShader.js';
+import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer.js';
+// import 'three/examples/jsm/postprocessing/ShaderPass.js';
 
 export const TOONSHADER_OUTLINE = 'toonshader-outline';
 export const ANAGLYPH = 'anaglyph';
 export const TOONSHADER = 'toonshader';
 
-export default class RenderChain extends THREE.EffectComposer {
+export default class RenderChain extends EffectComposer {
   constructor(renderer, scene, camera, shader, groups) {
     super(renderer);
     this._groups = groups;
